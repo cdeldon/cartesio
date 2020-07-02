@@ -6,18 +6,24 @@ cartesio
 .. image:: https://img.shields.io/pypi/v/cartesio.svg
         :target: https://pypi.python.org/pypi/cartesio
 
+
 .. image:: https://img.shields.io/travis/cdeldon/cartesio.svg
         :target: https://travis-ci.com/cdeldon/cartesio
+        
 
 .. image:: https://readthedocs.org/projects/cartesio/badge/?version=latest
         :target: https://cartesio.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
-
+        
 
 .. image:: https://pyup.io/repos/github/cdeldon/cartesio/shield.svg
      :target: https://pyup.io/repos/github/cdeldon/cartesio/
      :alt: Updates
+     
 
+.. image:: https://pyup.io/repos/github/cdeldon/cartesio/python-3-shield.svg
+     :target: https://pyup.io/repos/github/cdeldon/cartesio/
+     :alt: Python 3
 
 
 Simple geometry accelerated with Numba
