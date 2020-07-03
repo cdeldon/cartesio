@@ -8,7 +8,7 @@ cartesio
 
 
 .. image:: https://img.shields.io/travis/cdeldon/cartesio.svg
-        :target: https://travis-ci.com/cdeldon/cartesio
+        :target: https://travis-ci.com/cdeldon/cartesio.svg?branch=master
         
 
 .. image:: https://readthedocs.org/projects/cartesio/badge/?version=latest
