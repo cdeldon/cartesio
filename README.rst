@@ -17,13 +17,13 @@ cartesio
         
 
 .. image:: https://pyup.io/repos/github/cdeldon/cartesio/shield.svg
-     :target: https://pyup.io/repos/github/cdeldon/cartesio/
-     :alt: Updates
+        :target: https://pyup.io/repos/github/cdeldon/cartesio/
+        :alt: Updates
      
 
 .. image:: https://pyup.io/repos/github/cdeldon/cartesio/python-3-shield.svg
-     :target: https://pyup.io/repos/github/cdeldon/cartesio/
-     :alt: Python 3
+        :target: https://pyup.io/repos/github/cdeldon/cartesio/
+        :alt: Python 3
 
 
 Simple geometry accelerated with Numba
