@@ -3,8 +3,8 @@ cartesio
 ========
 
 
-.. image:: https://img.shields.io/pypi/v/cartesio.svg
-        :target: https://pypi.python.org/pypi/cartesio
+.. image:: https://badge.fury.io/py/cartesio.svg
+        :target: https://pypi.org/project/cartesio/0.1.0/
 
 
 .. image:: https://img.shields.io/travis/cdeldon/cartesio.svg
