@@ -1,6 +1,18 @@
 name: cartesio
 
-on: [push]
+# Trigger the workflow on push or pull request,
+# but only for the master branch
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+  schedule:
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
