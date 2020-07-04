@@ -7,15 +7,12 @@ cartesio
         :target: https://pypi.org/project/cartesio/0.1.0/
         :alt: pypi Status
 
-
 .. image:: https://readthedocs.org/projects/cartesio/badge/?version=latest
         :target: https://cartesio.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
 .. figure:: https://github.com/cdeldon/cartesio/workflows/tox/badge.svg?branch=master
    :alt: tox
-
 
 .. image:: https://pyup.io/repos/github/cdeldon/cartesio/shield.svg
         :target: https://pyup.io/repos/github/cdeldon/cartesio/
