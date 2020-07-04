@@ -41,6 +41,6 @@ setup(
     packages=find_packages(include=['cartesio', 'cartesio.*']),
     test_suite='tests',
     url='https://github.com/cdeldon/cartesio',
-    version='0.1.0',
+    version='0.1.1',
     zip_safe=False,
 )
