@@ -18,5 +18,5 @@ class TestCartesioCore(unittest.TestCase):
         """Tear down test fixtures, if any."""
 
     def test_length(self):
-        d = np.array([0, 0, 1, 1])
+        d = np.array([0, 0, 1, 2])
         self.assertAlmostEqual(cs.core.length(d), np.sqrt(2))
