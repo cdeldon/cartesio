@@ -19,4 +19,4 @@ class TestCartesioCore(unittest.TestCase):
 
     def test_length(self):
         d = np.array([0, 0, 1, 1])
-        self.assertAlmostEqual(cs.core.length(d), np.sqrt(2))
+        self.assertAlmostEqual(cs.core.segment_length(d), np.sqrt(2))
