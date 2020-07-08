@@ -2,7 +2,7 @@
 cartesio
 ========
 
-|pypi_badge| |doc_badge| |tox_badge| |flake8_badge| |pyup_badge|
+|pypi_badge| |doc_badge| |tox_badge| |flake8_badge| |coverage_badge| |pyup_badge|
 
 
 *Simple geometry accelerated with Numba*
@@ -40,6 +40,9 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. |flake8_badge| image:: https://github.com/cdeldon/cartesio/workflows/flake8/badge.svg?branch=master
         :alt: flake8
+        
+.. |coverage_badge| image:: https://codecov.io/gh/cdeldon/cartesio/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/cdeldon/cartesio
 
 .. |pyup_badge| image:: https://pyup.io/repos/github/cdeldon/cartesio/shield.svg
         :target: https://pyup.io/repos/github/cdeldon/cartesio/
