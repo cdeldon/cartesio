@@ -1,0 +1,19 @@
+name: codecov
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.10
+      with:
+        # User defined upload name. Visible in Codecov UI
+        name: cartesio
+        # Flag upload to group coverage metrics (e.g. unittests | integration | ui,chrome)
+        flags: unittests
