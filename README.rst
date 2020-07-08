@@ -16,7 +16,7 @@ cartesio
 Features
 --------
 
-* TODO
+* TODOs
 
 Credits
 -------
