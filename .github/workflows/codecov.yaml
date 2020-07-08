@@ -1,19 +1,31 @@
-name: codecov
+name: coverage
 
-on:
-  push:
-    branches: [ master, develop ]
-  pull_request:
-    branches: [ master, develop ]
+on: ['push', 'pull_request']
 
 jobs:
   coverage:
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.7]
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: ${{ matrix.python-version  }}
     steps:
-    - name: Codecov
-      uses: codecov/codecov-action@v1.0.10
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
       with:
-        # User defined upload name. Visible in Codecov UI
-        name: cartesio
-        # Flag upload to group coverage metrics (e.g. unittests | integration | ui,chrome)
+        python-version: ${{ matrix.python-version }}
+    - name: Generate coverage report
+      run: |
+        pip install coverage
+        coverage run -m unittest discover -s tests
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        file: ./coverage.xml
         flags: unittests
+        env_vars: OS,PYTHON
+        name: codecov-cartesio
