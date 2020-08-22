@@ -1,7 +1,9 @@
 """Tests for `cartesio.bbox` subpackage and modules."""
 
 import unittest
+
 import numpy as np
+
 import cartesio as cs
 
 
@@ -17,3 +19,5 @@ class TestCartesioBBox(unittest.TestCase):
     def test_bbox_area(self):
         d = np.array([0, 0, 1, 1])
         self.assertAlmostEqual(cs.bbox.area(d), 1)
+
+        self.assertAlmostEqual(cs.bbox.area.py_func(d), 1)

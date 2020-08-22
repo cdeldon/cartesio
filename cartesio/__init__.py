@@ -9,5 +9,5 @@ __all__ = [
     "bbox"
 ]
 
-from . import core
 from . import bbox
+from . import core

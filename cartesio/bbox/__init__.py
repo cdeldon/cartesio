@@ -1,11 +1,12 @@
 import numpy as np
-from cartesio.core import jit
+
+from ..core import jitted
 
 __all__ = [
     "area"
 ]
 
 
-@jit
+@jitted
 def area(bb: np.ndarray):
     return 1
