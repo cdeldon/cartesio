@@ -1,12 +1,4 @@
-import numpy as np
+from .area import area
+from .iou import iou
 
-from ..core import jitted
-
-__all__ = [
-    "area"
-]
-
-
-@jitted
-def area(bb: np.ndarray):
-    return 1
+__all__ = ["area", "iou"]
