@@ -2,7 +2,8 @@
 cartesio
 ========
 
-|pypi_badge| |doc_badge| |tox_badge| |flake8_badge| |coverage_badge| |codefactor_badge| |pyup_badge|
+|pypi_badge| |doc_badge| |tox_badge| |flake8_badge| |coverage_badge| |codefactor_badge|
+|pyup_badge| |black_badge|
 
 
 *Simple geometry accelerated with Numba*
@@ -40,10 +41,10 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. |flake8_badge| image:: https://github.com/cdeldon/cartesio/workflows/flake8/badge.svg?branch=master
         :alt: flake8
-        
+
 .. |coverage_badge| image:: https://codecov.io/gh/cdeldon/cartesio/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/cdeldon/cartesio
-   
+
 .. |codefactor_badge| image:: https://www.codefactor.io/repository/github/cdeldon/cartesio/badge
    :target: https://www.codefactor.io/repository/github/cdeldon/cartesio
    :alt: CodeFactor
@@ -51,3 +52,6 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 .. |pyup_badge| image:: https://pyup.io/repos/github/cdeldon/cartesio/shield.svg
         :target: https://pyup.io/repos/github/cdeldon/cartesio/
         :alt: Updates
+
+.. |black_badge| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+        :alt: Code style: black

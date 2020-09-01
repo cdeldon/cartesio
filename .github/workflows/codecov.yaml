@@ -24,6 +24,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Generate coverage report
+      env:
+        CARTESIO_DISABLE_JIT_COMPILE: TRUE
       run: |
         pip install coverage
         coverage run -m unittest discover -s tests
@@ -34,5 +36,6 @@ jobs:
       with:
         file: ./coverage.xml
         flags: unittests
-        env_vars: OS,PYTHON
+        env_vars: OS,PYTHON,CARTESIO_DISABLE_JIT_COMPILE
         name: codecov-cartesio
+        fail_ci_if_error: false
