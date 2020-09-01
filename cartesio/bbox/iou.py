@@ -1,3 +1,5 @@
+"""Module implementig functions to compute the IOU between bounding boxes
+"""
 import numpy as np
 
 from .area import area

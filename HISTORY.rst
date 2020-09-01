@@ -2,6 +2,7 @@
 History
 =======
 
+
 0.1.0 (2020-07-02)
 ------------------
 
@@ -12,3 +13,11 @@ History
 ------------------
 
 * Working Github actions, tox and flake8.
+
+
+0.2.0 (2020-09-01)
+------------------
+
+* BBox intersection over union (IOU)
+* Coverage
+* Black code formatting

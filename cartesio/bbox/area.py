@@ -1,3 +1,5 @@
+"""Module implementig functions to compute the area of a bounding box
+"""
 import numpy as np
 
 from ..core import jitted
@@ -8,8 +10,7 @@ __all__ = ["area"]
 @jitted
 def area(bb: np.ndarray) -> float:
     """Computes the area of the bbox passed as argument
-    :param bb: 1-dimensional np.ndarray of shape (4,) representing the bbox for which to compute
-    the aread
+    :param bb: 1-dimensional np.ndarray of shape (4,) representing the bbox for which to compute the area # noqa: E501
     :return: the area of the bbox passed as argument
     """
 

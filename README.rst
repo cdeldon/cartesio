@@ -17,7 +17,7 @@ cartesio
 Features
 --------
 
-* TODO
+* Bounding Box IOU
 
 Credits
 -------
