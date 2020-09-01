@@ -2,7 +2,7 @@
 
 __author__ = """Carlo Del Don"""
 __email__ = "carlo.deldon@gmail.com"
-__version__ = "0.1.1"
+__version__ = "__version__ = '0.1.1'"
 
 __all__ = ["core", "bbox"]
 
