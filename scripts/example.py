@@ -1,4 +1,5 @@
 import numpy as np
+
 from cartesio.bbox import area
 
 if __name__ == "__main__":
