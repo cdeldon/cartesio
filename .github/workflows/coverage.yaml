@@ -24,6 +24,9 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install coverage
+      - name: Setting env variables
+        run: |
+          export CARTESIO_DISABLE_JIT_COMPILE=True
       - name: Generate coverage report
         run: |
           coverage run -m unittest discover -s tests
