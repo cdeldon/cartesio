@@ -60,8 +60,7 @@ if _numba_jit_compile is False:
                 return inner
 
             return decorator
-        else:
 
-            if not hasattr(py_signature_or_function, "py_func"):
-                setattr(py_signature_or_function, "py_func", py_signature_or_function)
-            return py_signature_or_function
+        if not hasattr(py_signature_or_function, "py_func"):
+            setattr(py_signature_or_function, "py_func", py_signature_or_function)
+        return py_signature_or_function
