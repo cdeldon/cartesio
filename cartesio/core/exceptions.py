@@ -1,4 +1,8 @@
-__all__ = ["CartesioException", "ParameterException", "ArrayParameterException"]
+__all__ = [
+    "CartesioException",
+    "ParameterException",
+    "ArrayParameterException",
+]
 
 
 class CartesioException(Exception):
