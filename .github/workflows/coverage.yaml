@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - develop
-
 jobs:
   codecov:
     runs-on: ubuntu-latest
@@ -24,10 +23,9 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install coverage
-      - name: Setting env variables
-        run: |
-          export CARTESIO_DISABLE_JIT_COMPILE=True
       - name: Generate coverage report
+        env:
+          CARTESIO_DISABLE_JIT_COMPILE: True
         run: |
           coverage run -m unittest discover -s tests
           coverage xml --include "cartesio/*"
