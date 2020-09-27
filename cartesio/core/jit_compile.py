@@ -2,7 +2,9 @@ import os
 import warnings
 from functools import wraps
 
-__all__ = ["jit_compile"]
+__all__ = [
+    "jit_compile",
+]
 
 ENV_CARTESIO_DISABLE_JIT_COMPILE = "CARTESIO_DISABLE_JIT_COMPILE"
 DISABLE_JIT_COMPILE = os.getenv(ENV_CARTESIO_DISABLE_JIT_COMPILE, "FALSE").upper() in {
@@ -31,10 +33,15 @@ else:
 
 if _numba_jit_compile is False:
 
-    def jit_compile(py_signature_or_function=None, **numba_kwargs):
+    def jit_compile(
+        py_signature_or_function=None,
+        **numba_kwargs,
+    ):
         if py_signature_or_function is None:
 
-            def decorator(py_signature_or_function_inner):
+            def decorator(
+                py_signature_or_function_inner,
+            ):
 
                 if not hasattr(py_signature_or_function_inner, "py_func"):
                     setattr(
@@ -44,14 +51,16 @@ if _numba_jit_compile is False:
                     )
 
                 @wraps(py_signature_or_function_inner)
-                def inner(*args, **kwargs):
+                def inner(
+                    *args,
+                    **kwargs,
+                ):
                     return py_signature_or_function_inner(*args, **kwargs)
 
                 return inner
 
             return decorator
-        else:
 
-            if not hasattr(py_signature_or_function, "py_func"):
-                setattr(py_signature_or_function, "py_func", py_signature_or_function)
-            return py_signature_or_function
+        if not hasattr(py_signature_or_function, "py_func"):
+            setattr(py_signature_or_function, "py_func", py_signature_or_function)
+        return py_signature_or_function
