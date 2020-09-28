@@ -1,7 +1,0 @@
-coverage:
-  status:
-    project:
-      default: false  # disable the default status that measures entire project
-      tests:  # declare a new status context "tests"
-        target: 95%  # we always want 95% coverage here excluding some paths
-        paths: "!cartesio/core/exceptions.py", "!cartesio/core/jit_compile.py"
