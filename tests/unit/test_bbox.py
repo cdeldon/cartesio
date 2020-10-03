@@ -84,3 +84,24 @@ class TestCartesioBBox(TestCase):
             ),
             type_strict=True,
         )
+
+    def test_nms(self):
+        bbs = np.array(
+            [
+                [0, 0, 100, 100],
+                [0, 0, 90, 90],
+            ]
+        )
+        iou = cs.bbox.iou_single(bbs[0], bbs[1])
+        keep = cs.bbox.nms(bbs, thresh=iou - 0.0001)
+        self.assertArrayEqual(keep, np.array([0], dtype=np.int32), type_strict=True)
+
+        keep = cs.bbox.nms(bbs, thresh=iou + 0.0001)
+        self.assertArrayEqual(
+            keep,
+            np.array(
+                [0, 1],
+                dtype=np.int32,
+            ),
+            type_strict=True,
+        )
