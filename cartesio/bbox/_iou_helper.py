@@ -15,6 +15,7 @@ def _intersection_bb_size(
     bb_1: np.ndarray,
 ) -> np.ndarray:
     """Computes the size of the intersection between two bboxes
+
     :param bb_0: 1-dimensional np.ndarray of shape (4,) representing the first bbox
     :param bb_1: 1-dimensional np.ndarray of shape (4,) representing the second bbox
     :return: 1-dimensional np.ndarray of shape (2,) representing the [width, height] of the
