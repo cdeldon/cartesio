@@ -126,3 +126,23 @@ class TestCartesioBBox(TestCase):
             ),
             type_strict=True,
         )
+
+    def test_nms_longer(self):
+        bbs = np.array(
+            [
+                [0, 0, 100, 100],
+                [0, 0, 90, 90],
+                [50, 50, 200, 200],
+                [0, 0, 110, 110],
+            ]
+        )
+
+        keep = cs.bbox.nms(bbs, thresh=0.35)
+        self.assertArrayEqual(
+            keep,
+            np.array(
+                [0, 2],
+                dtype=np.int32,
+            ),
+            type_strict=True,
+        )
