@@ -3,21 +3,21 @@
 #
 # You may wish to alter this file to override the set of languages analyzed,
 # or to provide custom queries or build logic.
-name: "CodeQL"
+name: "code-ql"
 
 on:
   push:
-    branches: [master, develop]
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [master, develop]
+    branches:
+      - master
+      - develop
   schedule:
     # every sunday at midnight
     - cron:  '0 0 * * 0'
 
 jobs:
   analyze:
-    name: Analyze
+    name: analyze
     runs-on: ubuntu-latest
 
     strategy:
