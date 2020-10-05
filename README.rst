@@ -3,7 +3,7 @@ cartesio
 ========
 
 |pypi_badge| |doc_badge| |tox_badge| |flake8_badge| |coverage_badge| |codefactor_badge|
-|pyup_badge| |black_badge|
+|pyup_badge| |black_badge| |code_ql_badge|
 
 
 *Simple geometry accelerated with Numba*
@@ -55,3 +55,6 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. |black_badge| image:: https://img.shields.io/badge/code%20style-black-000000.svg
         :alt: Code style: black
+        
+.. |code_ql_badge| image:: https://github.com/cdeldon/cartesio/workflows/code-ql/badge.svg
+        :alt: CodeQL
