@@ -18,6 +18,15 @@ Features
 --------
 
 * Bounding Box IOU
+.. image:: docs/resources/IOU.png
+  :width: 400
+  :alt: IOU runtime measurements for implementation with/without numba compilation
+
+
+* Bounding Box NMS
+.. image:: docs/resources/NMS.png
+  :width: 400
+  :alt: NMS runtime measurements for implementation with/without numba compilation
 
 Credits
 -------
