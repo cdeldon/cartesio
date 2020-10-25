@@ -8,6 +8,46 @@ from .utils import TestCase
 class TestCartesioBBox(TestCase):
     """Tests for `cartesio.bbox` subpackage and modules."""
 
+    def test_utils(self):
+
+        ltrb = np.array([[0, 1, 2, 3]])
+        xywh = cs.bbox.utils.ltrb_to_xywh(ltrb)
+
+        self.assertArrayEqual(xywh, np.array([[1, 2, 2, 2]]), type_strict=False)
+
+        xywh = np.array([[0, 1, 2, 3]])
+        ltrb = cs.bbox.utils.xywh_to_ltrb(xywh)
+
+        self.assertArrayEqual(ltrb, np.array([[-1, -0.5, 1, 2.5]]), type_strict=False)
+        n = 42
+        cx_range = (0, 20)
+        cy_range = (100, 200)
+        w_range = (4, 5)
+        h_range = (10, 20)
+
+        random_ltrb = cs.bbox.utils.random(
+            n=n,
+            cx_range=cx_range,
+            cy_range=cy_range,
+            w_range=w_range,
+            h_range=h_range,
+        )
+        self.assertTupleEqual(random_ltrb.shape, (n, 4))
+
+        random_xywh = cs.bbox.utils.ltrb_to_xywh(random_ltrb)
+        for xywh in random_xywh:
+            self.assertGreaterEqual(xywh[0], cx_range[0])
+            self.assertLessEqual(xywh[0], cx_range[1])
+
+            self.assertGreaterEqual(xywh[1], cy_range[0])
+            self.assertLessEqual(xywh[1], cy_range[1])
+
+            self.assertGreaterEqual(xywh[2], w_range[0] / 2)  # Due to padding for x
+            self.assertLessEqual(xywh[2], w_range[1])
+
+            self.assertGreaterEqual(xywh[3], h_range[0] / 2)  # Due to padding for y
+            self.assertLessEqual(xywh[3], h_range[1])
+
     def test_area(self):
         bb = np.array([0, 0, 0, 0])
         self.assertEqual(cs.bbox.area(bb), 0)
