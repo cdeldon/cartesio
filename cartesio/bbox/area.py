@@ -30,7 +30,7 @@ def area(
 def areas(
     bbs: np.ndarray,
 ) -> np.ndarray:
-    """Conputes the area of the bboxes passed as argument
+    """Computes the area of the bboxes passed as argument
     :param bbs: 2-dimensional np.ndarray of shape (N,4) representing the bboxes for which to
     compute the area.
     :return 1-dimensional np.ndarray of shape (N,) of areas
