@@ -21,3 +21,10 @@ History
 * BBox intersection over union (IOU)
 * Coverage
 * Black code formatting
+
+
+0.3.0 (2020-10-25)
+------------------
+
+* BBox non maxima suppression (NMS)
+* Performance tests

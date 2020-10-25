@@ -12,7 +12,10 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: [ 3.7 ]
-
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: ${{ matrix.python-version }}
+      CARTESIO_DISABLE_JIT_COMPILE: True
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -24,8 +27,6 @@ jobs:
           pip install -r requirements.txt
           pip install coverage
       - name: Generate coverage report
-        env:
-          CARTESIO_DISABLE_JIT_COMPILE: True
         run: |
           coverage run -m unittest discover -s tests
           coverage xml --include "cartesio/*"
@@ -35,4 +36,6 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage.xml
           flags: unittests
+          name: codecov-unittests
           fail_ci_if_error: true
+          env_vars: OS, PYTHON, CARTESIO_DISABLE_JIT_COMPILE

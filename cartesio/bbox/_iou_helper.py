@@ -15,6 +15,7 @@ def _intersection_bb_size(
     bb_1: np.ndarray,
 ) -> np.ndarray:
     """Computes the size of the intersection between two bboxes
+
     :param bb_0: 1-dimensional np.ndarray of shape (4,) representing the first bbox
     :param bb_1: 1-dimensional np.ndarray of shape (4,) representing the second bbox
     :return: 1-dimensional np.ndarray of shape (2,) representing the [width, height] of the
@@ -22,12 +23,12 @@ def _intersection_bb_size(
     """
 
     left = max(bb_0[0], bb_1[0])
-    right = min(bb_0[0] + bb_0[2], bb_1[0] + bb_1[2])
+    right = min(bb_0[2], bb_1[2])
 
     width = max(0, right - left)
 
     top = max(bb_0[1], bb_1[1])
-    bottom = min(bb_0[1] + bb_0[3], bb_1[1] + bb_1[3])
+    bottom = min(bb_0[3], bb_1[3])
 
     height = max(0, bottom - top)
 

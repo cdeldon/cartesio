@@ -29,7 +29,8 @@ def _iou_single_v1(
     """
 
     # Compute the coordinates of the intersecting rectangle
-    w_in, h_in = _intersection_bb_size(bb_0, bb_1)
+    in_size = _intersection_bb_size(bb_0, bb_1)
+    w_in, h_in = in_size[0], in_size[1]
     intersection_area = w_in * h_in
 
     # Compute the areas of the individual bboxes
@@ -39,6 +40,7 @@ def _iou_single_v1(
     return intersection_area / (area_0 + area_1 - intersection_area)
 
 
+@jitted
 def _iou_v1(
     bbs_0: np.ndarray,
     bbs_1: np.ndarray,

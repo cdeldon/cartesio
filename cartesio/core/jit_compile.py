@@ -33,6 +33,7 @@ else:
 
 if _numba_jit_compile is False:
 
+    # noinspection PyUnusedLocal
     def jit_compile(
         py_signature_or_function=None,
         **numba_kwargs,
