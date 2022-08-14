@@ -1,5 +1,5 @@
 numba==0.50.1
-numpy==1.19.0
+numpy==1.23.2
 perfplot==0.8.5
 
 
